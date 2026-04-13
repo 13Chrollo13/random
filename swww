@@ -1,0 +1,7 @@
+mkdir -p ~/.cache/awww                                                                                                                                                           3.14.4  20:33 
+sudo ln -sf /usr/bin/awww /usr/bin/swww
+sudo ln -sf /usr/bin/awww-daemon /usr/bin/swww-daemon
+pkill awww-daemon
+pkill swww-daemon
+swww-daemon --namespace "$WAYLAND_DISPLAY" &
+hyde-shell reload
